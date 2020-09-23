@@ -169,7 +169,7 @@ i{
 .nav-link {
   position: relative;
 }
-
+@media (min-width:992px){
 .nav-item:hover .nav-link:after {
   border-bottom: .25rem solid #d43b7d;
   content: "";
@@ -183,7 +183,7 @@ i{
   bottom: -12px;
 }
 
-
+}
 
 
 .nav-link.active:after {
@@ -3397,11 +3397,6 @@ button.close {
     float: left;
   }
 
-  .nav-item:hover .nav-link:after {
-    border-bottom: none;
-
-
-  }
 
   .right {
     padding: 2em 1em 1em 1em;
