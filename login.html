@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+	<meta name="keywords" content="elizabeth rodricks javascript html css api developer front-end jquery">
+	<title class="notranslate" translate="no">My Custom Google Translate Button</title>
+	<link rel="stylesheet" href="vendorlibs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="vendorlibs/font-awesome-pro/css/all.css">
+	<link rel="stylesheet" href="vendorlibs/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_960_720.png">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
+	<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/landing.js"></script>
+
+	<script type="text/javascript">
+	function googleTranslateElementInit() {
+		new google.translate.TranslateElement({pageLanguage: 'ro',
+		includedLanguages: 'pt,af,ar,de,en,es,fr,hu,it,ja,no,ro,ru,tr,zh-CN',
+		layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+		autoDisplay: false}, 'google_translate_element');
+	}
+
+	function loadGoogleTranslate() {
+		var googleTranslateScript = document.createElement('script');
+		googleTranslateScript.type = 'text/javascript';
+		googleTranslateScript.async = true;
+		googleTranslateScript.src = 'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild(googleTranslateScript);
+	}
+	$('.lang-select').click(function() {
+		var theLang = jQuery(this).attr('data-lang');
+		$('.goog-te-combo').val(theLang);
+
+		window.location = jQuery(this).attr('href');
+		location.reload();
+
+	});
+	</script>
+</head>
+<body>
+
+	<!-- <div id="translate-a">
+	<div class="wrap-a">
+	<div id="google_translate_element"></div>
+</div>
+</div> -->
+
+<div class="container-fluid overflow-hidden position-relative shadow">
+	<header id="Home">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+				<a class="pb-0" href="">
+					<div class="d-flex justify-content-start">
+						<img src="https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_960_720.png" class="img-responsive logo" alt="Population Assessment of Tobacco and Health Logo">
+						<!-- <h2 class="name">Elizabeth Rodricks</h2> -->
+					</div>
+				</a>
+				<button class="navbar-toggler collapsed mr-2" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav d-block d-lg-flex ml-auto text-right d-flex align-items-center">
+						<li class="nav-item">
+							<a  href="" class="notranslate nav-link active" data-lang="en" translate="no">
+
+								English
+							</a>
+						</li>
+
+
+						<li class="nav-item">
+							<a href="#googtrans(en|es)" class="lang-select nav-link" data-lang="es"  onclick="loadGoogleTranslate()">
+								Espa&ntilde;ol
+
+							</a>
+						</li>
+
+					</li>
+
+					<li class="nav-item">
+						<a href="#googtrans(en|fr)" class="lang-select nav-link" data-lang="fr"  onclick="loadGoogleTranslate()">
+							French
+						</a>
+					</li>
+
+
+					<li class="nav-item">
+						<a href="#googtrans(en|it)" class="lang-select nav-link" data-lang="it"  onclick="loadGoogleTranslate()">
+							Italian
+						</a>
+					</li>
+
+
+					<li class="nav-item">
+						<a href="#googtrans(en|pt)" class="lang-select nav-link" data-lang="pt"  onclick="loadGoogleTranslate()">
+							Portuguese
+						</a>
+					</li>
+
+
+					<li class="nav-item showEnglishOnly">
+						<a href="#googtrans(en|zh-CN)" class="lang-select nav-link" data-lang="zh-CN"  onclick="loadGoogleTranslate()">
+							Chinese
+						</a>
+
+
+						<!-- <li class="nav-item showEnglishOnly">
+						<a href="#googtrans(en|ja)" class="lang-select nav-link" data-lang="ja"  onclick="loadGoogleTranslate()">
+						Japanese
+					</a>
+				</li>
+			-->
+
+
+
+			<!-- <a id="ingles" href="#googtrans(en|en)" class="lang-en lang-select english activeDot" data-lang="en" tabindex="0" aria-hidden="false" role="button" onclick="loadGoogleTranslate()">
+
+			<p class="language">English</p>
+
+		</a> -->
+
+
+
+	</div>
+</div>
+</div>
+</nav>
+</header>
+</div>
+<div class="wrapper">
+	<div class="container-fluid">
+		<div id="Guide" class="landing-sec container-fluid heros">
+			<div class="guide-overlay container">
+
+				<h1 class="name text-center">Custom Google Translate Button by Elizabeth Rodricks</h1>
+
+
+				<h2 class="landing-sec-H">How I Created a Custom Button</h2>
+				<p>In order to create a custom button rather than the standard Google Translate dropdown, I had to do a few things. First, I had to hide all of the unwanted Google divs/logos with CSS. Next, I created a click event that gets the value of the data language of each button and reloads the window with that attribute at the end of the pages' path. Last, in order the bypass "Show Original" the "Select Language" option of the standard Google Translate dropdown, I removed the googleTranslateElementInit link from my file and wrote a script that appends this essential link every time you click on one of the buttons with a data language attribute. A little hacky? Yes. But does it get the job done? Yes!</p>
+
+
+				<h2 class="landing-sec-H">About Google Translate</h2>
+
+				<p>Google Translate is a free multilingual neural machine translation service developed by Google, to translate text and websites from one language into another. It offers a website interface, a mobile app for Android and iOS, and an application programming interface that helps developers build browser extensions and software applications.</p>
+				<p>As of September 2020, Google Translate supports 109 languages at various levels and as of April 2016, claimed over 500 million total users, with more than 100 billion words translated daily.</p>
+
+				<p>Launched in April 2006 as a statistical machine translation service, it used United Nations and European Parliament documents and transcripts to gather linguistic data. Rather than translating languages directly, it first translates text to English and then pivots to the target language in most of the language combinations it posits in its grid,with a few exceptions including Catalan-Spanish.</p>
+				<p>During a translation, it looks for patterns in millions of documents to help decide on which words to choose and how to arrange them in the target language. Its accuracy, which has been criticized and ridiculed on several occasions, has been measured to vary greatly across languages.</p>
+				<p>In November 2016, Google announced that Google Translate would switch to a neural machine translation engine - Google Neural Machine Translation (GNMT) - which translates "whole sentences at a time, rather than just piece by piece. It uses this broader context to help it figure out the most relevant translation, which it then rearranges and adjusts to be more like a human speaking with proper grammar". Originally only enabled for a few languages in 2016, GNMT is used in all 109 languages in
+
+					<p>Texts written in the Greek, Devanagari, Cyrillic and Arabic scripts can be transliterated automatically from phonetic equivalents written in the Latin alphabet. The browser version of Google Translate provides the read phonetically option for Japanese to English conversion. The same option is not available on the paid API version.</p>
+					<p>Many of the more popular languages have a "text-to-speech" audio function that is able to read back a text in that language, up to a few dozen words or so. In the case of pluricentric languages, the accent depends on the region: for English, in the Americas, most of the Asia-Pacific and West Asia, the audio uses a female General American accent, whereas in Europe, Hong Kong, Malaysia, Singapore, Guyana and all other parts of the world, a female British (Received Pronunciation) accent is used, except for a special General Australian accent used in Australia, New Zealand and Norfolk Island, and an Indian English accent used in India; for Spanish, in the Americas, a Latin American accent is used, while in the other parts of the world, a Castilian accent is used; for Portuguese, a São Paulo accent is used around the world, except in Portugal, where their native accent is used instead; for French, a Quebecois accent is used in Canada, while in the other parts of the world, a standard European accent is used; for Bengali, a male Bangladeshi accent is used, except in India, where a special female Indian Bengali accent is used instead. Some less widely spoken languages use the open-source eSpeak synthesizer for their speech; producing a robotic, awkward voice that may be difficult to understand.</p>
+
+					<h2 class="landing-sec-H">Browser integration</h2>
+					<p>Google Translate is available in some web browsers as an optional downloadable extension that can run the translation engine, which allow right-click command access to the translation service. In February 2010, Google Translate was integrated into the Google Chrome browser by default, for optional automatic webpage translation.</p>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script type="text/javascript" src="vendorlibs/jquery.min.js"></script>
+	<script type="text/javascript" src="vendorlibs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/landing.js"></script> -->
+	<!-- <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&amp;languages=en,es"></script> -->
+	<!-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+
+	<script>
+
+	$('.showEnglishOnly').click(function (){
+		$('.nav-item:eq(1), .nav-item:eq(2), .nav-item:eq(3), .nav-item:eq(4)').hide()
+	})
+
+
+</script>
+
+
+
+<!-- <script type="text/javascript">
+
+
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({
+pageLanguage: "en",
+
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+
+}, "google_translate_element")
+}
+
+
+function triggerHtmlEvent(element, eventName) {
+var event;
+if (document.createEvent) {
+event = document.createEvent('HTMLEvents');
+event.initEvent(eventName, true, true);
+element.dispatchEvent(event);
+} else {
+event = document.createEventObject();
+event.eventType = eventName;
+element.fireEvent('on' + event.eventType, event);
+}
+}
+
+$('.lang-select').click(function() {
+var theLang = jQuery(this).attr('data-lang');
+$('.goog-te-combo').val(theLang);
+
+window.location = jQuery(this).attr('href');
+location.reload();
+
+});
+</script> -->
+
+</body>
+
+</html>
